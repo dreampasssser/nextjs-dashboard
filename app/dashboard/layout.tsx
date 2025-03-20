@@ -1,6 +1,7 @@
 import SideNav from '@/app/ui/dashboard/sidenav'
 
-export const experimental_ppr = true
+// 实验性功能，只能在最新的 canary 版本中使用
+// export const experimental_ppr = true
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
