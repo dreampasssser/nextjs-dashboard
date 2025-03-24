@@ -4,6 +4,8 @@ import { invoices, customers, revenue, users } from '../lib/placeholder-data'
 
 const sql = postgres(process.env.DATABASE_URL!, { ssl: 'require' })
 
+export const runtime = 'edge'
+
 async function seedUsers() {
   await sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`
   await sql`
