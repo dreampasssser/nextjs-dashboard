@@ -1,4 +1,5 @@
 import type { NextConfig } from 'next'
+import { setupDevPlatform } from '@cloudflare/next-on-pages/next-dev'
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -6,6 +7,10 @@ const nextConfig: NextConfig = {
   // experimental: {
   //   ppr: 'incremental',
   // },
+}
+
+if (process.env.NODE_ENV === 'development') {
+  setupDevPlatform().catch((e) => console.error(e))
 }
 
 export default nextConfig
