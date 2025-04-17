@@ -1,6 +1,6 @@
-// import postgres from 'postgres'
+// import { neon } from '@neondatabase/serverless'
 
-// const sql = postgres(process.env.DATABASE_URL!, { ssl: 'require' })
+// const sql = neon(process.env.DATABASE_URL!)
 
 // async function listInvoices() {
 //   const data = await sql`

@@ -1,8 +1,8 @@
 // import bcrypt from 'bcrypt'
-// import postgres from 'postgres'
+// import { neon } from '@neondatabase/serverless'
 // import { invoices, customers, revenue, users } from '../lib/placeholder-data'
 
-// const sql = postgres(process.env.DATABASE_URL!, { ssl: 'require' })
+// const sql = neon(process.env.DATABASE_URL!)
 
 // async function seedUsers() {
 //   await sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`
@@ -107,12 +107,10 @@ export async function GET() {
       'Uncomment this file and remove this line. You can delete this file when you are finished.',
   })
   // try {
-  //   const result = await sql.begin((sql) => [
-  //     seedUsers(),
-  //     seedCustomers(),
-  //     seedInvoices(),
-  //     seedRevenue(),
-  //   ])
+  //   await seedUsers()
+  //   await seedCustomers()
+  //   await seedInvoices()
+  //   await seedRevenue()
 
   //   return Response.json({ message: 'Database seeded successfully' })
   // } catch (error) {
